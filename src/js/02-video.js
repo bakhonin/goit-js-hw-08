@@ -14,9 +14,9 @@ player.on('timeupdate', throttle(function (data){
 player.on('timeupdate',throttle(function(data){
     localStorage.setItem(KEY_STORAGE, JSON.stringify(data.seconds));
 }),1000)
-const getTime = localStorage.getItem(STORAGE_KEY); 
-  if(getTime){
-   player.setCurrentTime(JSON.parse(getTime));
+const getTimeVideo = localStorage.getItem(STORAGE_KEY); 
+  if(getTimeVideo){
+   player.setCurrentTime(JSON.parse(getTimeVideo));
   }; 
 
 player.setCurrentTime()
