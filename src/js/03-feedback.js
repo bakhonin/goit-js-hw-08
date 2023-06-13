@@ -14,9 +14,9 @@ function savedInputsValue(){
     
   if(getData){
     const { email, message } = JSON.parse(getData);
-    formEl.elements.email.value = email;
-    formEl.elements.message.value = message;
-  }  else {
+    formEl.elements.email.value = email || '';
+    formEl.elements.message.value = message || '';
+  } else {
     formEl.elements.email.value = '';
     formEl.elements.message.value = '';
   }
